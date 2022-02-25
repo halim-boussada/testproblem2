@@ -1,104 +1,205 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+body {
+  margin-top: 20px;
+}
+
+.chat-online {
+  color: #34ce57;
+}
+
+.chat-offline {
+  color: #e4606d;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  max-height: 800px;
+  overflow-y: scroll;
+}
+
+.chat-message-left,
+.chat-message-right {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.chat-message-left {
+  margin-right: auto;
+}
+
+.chat-message-right {
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+.py-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+#body {
+  height: 60vh;
+}
+.px-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+.border-top {
+  border-top: 1px solid #dee2e6 !important;
+}
+#hr {
+  width: 150px;
+}
+
+/* CSS */
+.button-17 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 150px;
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
   box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: 0.25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+.button-17:hover {
+  background: #f6f9fe;
+  color: #174ea6;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 4px 4px 0,
+    rgba(60, 64, 67, 0.15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+#signin {
+  margin: 0 auto;
+  margin-top: 30vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: #424549;
+}
+
+#signin input {
+  background-color: #2a2b2c;
+  color: white;
+  border: 1px solid black;
+}
+
+#signin label {
+  color: white;
+  font-size: bold;
+}
+
+#signin button {
+  background-color: #554892;
+  border: none;
 }
 
 body {
-  height: 600px;
-  overflow-y: auto;
-  background-color: #f8f8f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#container2 {
-  height: 150px;
-  overflow-y: auto;
-}
-.time-right {
-  color: #aaa;
-  display: none;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://exodus-labs.com/uploads/monthly_2021_09/slider3.jpg.d8bfc2fe7c8838eee54ce96a90683124.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.container {
-  width: 450px;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
-  background-color: dodgerblue;
+input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: gray !important;
+  opacity: 1; /* Firefox */
 }
-
-.header {
-  color: white;
-  padding: 15px;
+.flex {
+  display: grid;
+  grid-template-columns: 1fr;
 }
-
-.body {
-  flex: 1;
-  color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px 30px;
-}
-
-.message {
-  background-color: dodgerblue;
-  padding: 10px;
-  color: white;
-  width: fit-content;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.message:hover .time-right {
-  display: block;
-}
-.darker {
-  margin-left: auto;
-  background-color: white;
-  color: black;
-}
-
-.footer {
+.small {
   display: flex;
 }
-
-.footer input {
-  flex: 1;
-  height: 40px;
-  border: none;
-  outline: none;
-  padding-left: 5px;
-  font-size: 16px;
+#online {
+  height: 7px;
+  width: 7px;
+  background-color: #34ce57;
+  border-radius: 30px;
 }
-
-.send {
-  width: 100px;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: dodgerblue;
+#offline {
+  height: 7px;
+  width: 7px;
+  background-color: grey;
+  border-radius: 30px;
+}
+#error {
+  background-color: rgb(218, 108, 108);
+  border: 1px solid rgb(219, 88, 88);
   color: white;
-  cursor: pointer;
-}
-
-.send:hover {
-  background-color: blue;
-  transition: 1s ease;
-}
-
-.more {
-  width: 100px;
-  font-size: 18px;
-  justify-self: center;
-  border: none;
-  outline: none;
-  background-color: rgb(255, 255, 255);
-  color: dodgerblue;
-  cursor: pointer;
-  margin-left: 33%;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  padding: 3px;
+  border-radius: 3px;
+  margin-top: 3px;
 }
