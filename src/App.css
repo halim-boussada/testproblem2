@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 600px;
+  overflow-y: auto;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container2 {
+  height: 150px;
+  overflow-y: auto;
+}
+.time-right {
+  color: #aaa;
+  display: none;
+}
+
+.container {
+  width: 450px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+  background-color: dodgerblue;
+}
+
+.header {
+  color: white;
+  padding: 15px;
+}
+
+.body {
+  flex: 1;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 30px;
+}
+
+.message {
+  background-color: dodgerblue;
+  padding: 10px;
+  color: white;
+  width: fit-content;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.message:hover .time-right {
+  display: block;
+}
+.darker {
+  margin-left: auto;
+  background-color: white;
+  color: black;
+}
+
+.footer {
+  display: flex;
+}
+
+.footer input {
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding-left: 5px;
+  font-size: 16px;
+}
+
+.send {
+  width: 100px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: dodgerblue;
+  color: white;
+  cursor: pointer;
+}
+
+.send:hover {
+  background-color: blue;
+  transition: 1s ease;
+}
+
+.more {
+  width: 100px;
+  font-size: 18px;
+  justify-self: center;
+  border: none;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  color: dodgerblue;
+  cursor: pointer;
+  margin-left: 33%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
